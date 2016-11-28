@@ -1,0 +1,6 @@
+{
+  "dependencies": {},
+  "globalDependencies": {
+    "arcgis-js-api": "github:Esri/jsapi-resources/4.x/typescript/arcgis-js-api.d.ts"
+  }
+}
