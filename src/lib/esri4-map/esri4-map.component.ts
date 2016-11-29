@@ -4,8 +4,17 @@ import { EsriLoaderService } from 'angular2-esri-loader';
 
 @Component({
   selector: 'esri4-map',
-  templateUrl: './esri4-map.component.html',
-  styleUrls: ['./esri4-map.component.css']
+  template: `
+    <div class="map" id="esri4-map" #map></div>
+  `,
+  styles: [`
+    .map {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  `]
 })
 export class Esri4MapComponent implements OnInit {
   map: __esri.Map;
