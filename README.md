@@ -3,11 +3,19 @@
 
 A set of Angular 2 components to work with [ArcGIS API for JavaScript v4.1](https://developers.arcgis.com/javascript/)
 
-## Install
+## Setup
 
 ```
 npm install --save angular2-esri4-components
 ```
+
+Currently their is a dependency where users of this package to have to install the arcgis-js-api typings library.  There is an open issue to correct this [here](https://github.com/kgs916/angular2-esri4-components/issues/3).  In the mean time to install the library follow the below steps:
+
+```
+npm install typings -g
+typings init
+typings install github:Esri/jsapi-resources/4.x/typescript/arcgis-js-api.d.ts --global --save
+``` 
 
 ## Component status:
 
