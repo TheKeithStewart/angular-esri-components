@@ -27,6 +27,7 @@ export class MapComponent implements OnInit {
     zoom: 8
   };
   map: __esri.Map;
+  map: __esri.MapView;
 
   @ViewChild(Esri4MapComponent) esriComponent: Esri4MapComponent;
 
@@ -34,8 +35,9 @@ export class MapComponent implements OnInit {
 
   ngOnInit() { }
 
-  onMapInit(map: __esri.Map) {
-    this.map = map;
+  onMapInit(mapInfo: {map: __esri.Map, mapView: __esri.MapView}) {
+    this.map = mapInfo.map;
+    this.mapView = mapInfo.mapView;
   }
 }
 ```

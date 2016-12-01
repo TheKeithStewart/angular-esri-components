@@ -25,7 +25,7 @@ export class Esri4MapComponent implements OnInit {
   @Input() mapProperties: __esri.MapProperties;
   @Input() mapViewProperties: __esri.MapViewProperties;
 
-  @Output() mapInit: EventEmitter<__esri.Map> = new EventEmitter();
+  @Output() mapInit: EventEmitter<{map: __esri.Map, mapView: __esri.MapView}> = new EventEmitter();
 
   constructor(private esriLoader: EsriLoaderService) { }
 
@@ -53,7 +53,10 @@ export class Esri4MapComponent implements OnInit {
 
           this.mapView = new MapView(this.mapViewProperties)
 
-          this.mapInit.emit(this.map);
+          this.mapInit.emit({
+            map: this.map,
+            mapView: this.mapView
+          });
           this.mapInit.complete();
         });
     });
