@@ -27,7 +27,7 @@ export class MapComponent implements OnInit {
     zoom: 8
   };
   map: __esri.Map;
-  map: __esri.MapView;
+  mapView: __esri.MapView;
 
   @ViewChild(Esri4MapComponent) esriComponent: Esri4MapComponent;
 
