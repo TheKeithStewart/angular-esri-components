@@ -30,9 +30,25 @@ typings install github:Esri/jsapi-resources/4.x/typescript/arcgis-js-api.d.ts --
 
 ## Setup
 
+Import CSS for ArcGIS API for JavaScript v4 into the head of your index.html:
+
+```html
+<!doctype html>
+<html>
+<head>
+  <!-- ... -->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
+  <!-- ... -->
+</head>
+<body>
+  <app-root>Loading...</app-root>
+</body>
+</html>
+```
+
 Include `Angular2Esri4Module` in your main module:
 
-```
+```ts
 // ...
 
 import { Angular2Esri4Module } from 'angular2-esri4-components';
