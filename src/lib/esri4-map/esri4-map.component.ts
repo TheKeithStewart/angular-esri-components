@@ -23,7 +23,8 @@ export class Esri4MapComponent implements OnInit {
   @ViewChild('map') mapEl: ElementRef;
 
   @Input() mapProperties: __esri.MapProperties;
-  @Input() mapViewProperties: __esri.MapViewProperties;
+  @Input() mapViewProperties: __esri.MapViewProperties = {};
+  @Input() portalItemId: string;
 
   @Output() mapInit: EventEmitter<{map: __esri.Map, mapView: __esri.MapView}> = new EventEmitter();
 
@@ -43,16 +44,29 @@ export class Esri4MapComponent implements OnInit {
       // the specific version of the API that is to be used
       url: '//js.arcgis.com/4.1'
     }).then(() => {
-      this.esriLoader.loadModules(['esri/Map', 'esri/views/MapView'])
-        .then(([Map, MapView]: [__esri.MapConstructor, __esri.MapViewConstructor]) => {
-          this.map = new Map(this.mapProperties);
+      this.esriLoader.loadModules(['esri/Map', 'esri/views/MapView', 'esri/WebMap'])
+        .then(([Map, MapView, WebMap]: [__esri.MapConstructor, __esri.MapViewConstructor, __esri.WebMapConstructor]) => {
+          // determine if loading a WebMap or creating a custom map
+          if (this.portalItemId) {
+            // create one object containing the portalItemId and the map properties
+            const mapProperties = Object.assign({
+              portalItem: {
+                id: this.portalItemId
+              }
+            }, this.mapProperties);
+            this.map = new WebMap(mapProperties);
+          } else {
+            this.map = new Map(this.mapProperties);
+          }
 
           // prepare properties that should be set locally
           if (!this.mapViewProperties.container) this.mapViewProperties.container = this.mapEl.nativeElement.id;
           if (!this.mapViewProperties.map) this.mapViewProperties.map = this.map;
 
+          // create the MapView
           this.mapView = new MapView(this.mapViewProperties)
 
+          // emit event informing application that the map has been loaded
           this.mapInit.emit({
             map: this.map,
             mapView: this.mapView
