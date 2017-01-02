@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Esri4MapComponent } from './src/lib/esri4-map/esri4-map.component';
-
-import { EsriLoaderService } from 'angular2-esri-loader';
+import {
+  Esri4MapComponent,
+  Esri4MapService
+} from './src/lib';
 
 export * from './src/lib/esri4-map/esri4-map.component';
 
@@ -10,8 +11,14 @@ export * from './src/lib/esri4-map/esri4-map.component';
   imports: [
     CommonModule
   ],
-  declarations: [Esri4MapComponent],
-  exports: [Esri4MapComponent],
-  providers: [EsriLoaderService]
+  declarations: [
+    Esri4MapComponent,
+  ],
+  exports: [
+    Esri4MapComponent,
+  ],
+  providers: [
+    Esri4MapService
+  ]
 })
 export class Angular2Esri4Module { }
