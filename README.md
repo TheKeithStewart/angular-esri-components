@@ -19,12 +19,13 @@ typings install github:Esri/jsapi-resources/4.x/typescript/arcgis-js-api.d.ts --
 
 ## Component status:
 
-| Component        | Status                              | Docs         | Issue          |
-|------------------|-------------------------------------|--------------|----------------|
-| esri4-map        |                           Available | [README][1]  |              - |
-| esri4-legend     |                         Not Started |              |              - |
-| esri4-layerList  |                         Not Started |              |              - |
-| (more coming)    |                                     |              |              - |
+| Component         | Status                              | Docs         | Issue          |
+|-------------------|-------------------------------------|--------------|----------------|
+| esri4-map         |                           Available | [README][1]  |              - |
+| esri4-legend      |                         Not Started |              |              - |
+| esri4-layerList   |                         Not Started |              |              - |
+| esri4CustomWidget |                         Not Started |              |              - |
+| (more coming)     |                                     |              |              - |
 
  [1]: https://github.com/kgs916/angular2-esri4-components/blob/master/src/lib/esri4-map/README.md
 

@@ -1,3 +1,9 @@
+<a name="0.3.0"></a>
+# 0.3.0 (2017-01-02)
+
+### Features
+* **widgets:** Add the `esri4CustomWidget` directive to allow for custom elements to be added as a widget over the map.
+
 <a name="0.2.0"></a>
 # 0.2.0 (2016-12-28)
 

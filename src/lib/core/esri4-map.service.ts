@@ -41,4 +41,8 @@ export class Esri4MapService {
       });
     });
   }
+
+  addWidget(element: HTMLElement, position: string) {
+    this.mapView.ui.add(element, position);
+  }
 }

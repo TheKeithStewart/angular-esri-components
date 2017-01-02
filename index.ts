@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   Esri4MapComponent,
-  Esri4MapService
+  Esri4MapService,
+  CustomWidgetDirective
 } from './src/lib';
 
 export * from './src/lib/esri4-map/esri4-map.component';
@@ -13,9 +14,11 @@ export * from './src/lib/esri4-map/esri4-map.component';
   ],
   declarations: [
     Esri4MapComponent,
+    CustomWidgetDirective
   ],
   exports: [
     Esri4MapComponent,
+    CustomWidgetDirective
   ],
   providers: [
     Esri4MapService
