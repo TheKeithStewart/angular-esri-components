@@ -2,7 +2,8 @@
 # 0.3.0 (2017-01-02)
 
 ### Features
-* **widgets:** Add the `esri4CustomWidget` directive to allow for custom elements to be added as a widget over the map.
+* **widgets:** Add the `esri4-customWidget` directive to allow for custom elements to be added as a widget over the map.
+* **widgets:** Add the `esri4-layersToggle` component to allow for toggling the visibility of layers of the map.
 
 <a name="0.2.0"></a>
 # 0.2.0 (2016-12-28)

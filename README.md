@@ -19,16 +19,22 @@ typings install github:Esri/jsapi-resources/4.x/typescript/arcgis-js-api.d.ts --
 
 ## Component status:
 
-| Component         | Status                              | Docs         | Issue          |
-|-------------------|-------------------------------------|--------------|----------------|
-| esri4-map         |                           Available | [README][1]  |              - |
-| esri4-legend      |                         Not Started |              |              - |
-| esri4-layerList   |                         Not Started |              |              - |
-| esri4CustomWidget |                         Not Started |              |              - |
-| (more coming)     |                                     |              |              - |
+| Component          | Status                              | Docs         | Issue          |
+|--------------------|-------------------------------------|--------------|----------------|
+| esri4-map          |                           Available | [README][1]  |              - |
+| esri4-legend       |                         Not Started |              |              - |
+| esri4-layerList    |                         Not Started |              |              - |
+| esri4-customWidget |                           Available | [README][2]  |      [#4][004] |
+| esri4-layersToggle |                           Available | [README][3]  |      [#6][006] |
+| (more coming)      |                                     |              |              - |
 
  [1]: https://github.com/kgs916/angular2-esri4-components/blob/master/src/lib/esri4-map/README.md
+ [2]: https://github.com/kgs916/angular2-esri4-components/blob/master/src/lib/widgets/custom-widget/README.md
+ [3]: https://github.com/kgs916/angular2-esri4-components/blob/master/src/lib/widgets/layers-toggle/README.md
 
+ [004]: https://github.com/kgs916/angular2-esri4-components/issues/4
+ [006]: https://github.com/kgs916/angular2-esri4-components/issues/6
+ 
 ## Setup
 
 Import CSS for ArcGIS API for JavaScript v4 into the head of your index.html:

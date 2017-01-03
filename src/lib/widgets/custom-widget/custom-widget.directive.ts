@@ -3,7 +3,7 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 import { Esri4MapService } from './../../core';
 
 @Directive({
-  selector: '[esri4CustomWidget]'
+  selector: '[esri4-customWidget]'
 })
 export class CustomWidgetDirective implements OnInit {
 

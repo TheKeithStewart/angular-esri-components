@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import {
   Esri4MapComponent,
   Esri4MapService,
-  CustomWidgetDirective
+  CustomWidgetDirective,
+  LayersToggleComponent
 } from './src/lib';
 
 export * from './src/lib/esri4-map/esri4-map.component';
@@ -14,11 +15,13 @@ export * from './src/lib/esri4-map/esri4-map.component';
   ],
   declarations: [
     Esri4MapComponent,
-    CustomWidgetDirective
+    CustomWidgetDirective,
+    LayersToggleComponent
   ],
   exports: [
     Esri4MapComponent,
-    CustomWidgetDirective
+    CustomWidgetDirective,
+    LayersToggleComponent
   ],
   providers: [
     Esri4MapService
