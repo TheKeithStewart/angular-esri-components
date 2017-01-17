@@ -8,3 +8,4 @@ typings
 // generated files from Angular Compiler
 *.ngsummary.json
 *.ngfactory.ts
+*.metadata.json

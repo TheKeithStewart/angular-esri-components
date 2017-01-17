@@ -26,7 +26,6 @@
     "bundles"
   ],
   "angularCompilerOptions": {
-    "strictMetadataEmit": true,
-    "skipMetadataEmit" : true
+    "strictMetadataEmit": true
   }
 }
