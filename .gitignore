@@ -4,3 +4,7 @@ npm-debug.log
 typings
 
 *.d.ts
+
+// generated files from Angular Compiler
+*.ngsummary.json
+*.ngfactory.ts

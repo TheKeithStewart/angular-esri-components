@@ -4,7 +4,7 @@
   "description": "A set of Angular 2 components to work with ArcGIS API for JavaScript v4.1",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "typings install && tsc"
+    "prepublish": "typings install && ngc"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,8 @@
   "typings": "./angular2-esri4-components.d.ts",
   "dependencies": {
     "@angular/common": "^2.2.3",
+    "@angular/compiler": "^2.4.3",
+    "@angular/compiler-cli": "^2.4.3",
     "@angular/core": "^2.2.3",
     "@angular/platform-browser": "^2.2.3",
     "angular2-esri-loader": "^0.1.10"
