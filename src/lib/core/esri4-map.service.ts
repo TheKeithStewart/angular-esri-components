@@ -12,7 +12,7 @@ export class Esri4MapService {
   loadMap(mapProperties: __esri.MapProperties, mapViewProperties: __esri.MapViewProperties, mapEl: ElementRef) {
     return this.esriLoader.load({
       // the specific version of the API that is to be used
-      url: '//js.arcgis.com/4.1'
+      url: '//js.arcgis.com/4.2'
     }).then(() => {
       return this.esriLoader.loadModules([
         'esri/Map', 'esri/views/MapView', 'esri/WebMap'

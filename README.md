@@ -1,7 +1,7 @@
 # angular2-esri4-components
 [![npm version](https://badge.fury.io/js/angular2-esri4-components.svg)](https://badge.fury.io/js/angular2-esri4-components)
 
-A set of Angular 2 components to work with [ArcGIS API for JavaScript v4.1](https://developers.arcgis.com/javascript/)
+A set of Angular 2 components to work with [ArcGIS API for JavaScript v4.2](https://developers.arcgis.com/javascript/)
 
 ## Setup
 
@@ -44,7 +44,7 @@ Import CSS for ArcGIS API for JavaScript v4 into the head of your index.html:
 <html>
 <head>
   <!-- ... -->
-  <link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.2/esri/css/main.css">
   <!-- ... -->
 </head>
 <body>
