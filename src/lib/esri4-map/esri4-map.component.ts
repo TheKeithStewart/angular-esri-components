@@ -23,8 +23,8 @@ export class Esri4MapComponent implements OnInit {
   @ViewChild('map') mapEl: ElementRef;
 
   @Input() mapProperties: __esri.MapProperties;
+  @Input() webMapProperties: __esri.WebMapProperties;
   @Input() mapViewProperties: __esri.MapViewProperties = {};
-  @Input() portalItemId: string;
 
   @Output() mapInit = new EventEmitter();
 
@@ -40,17 +40,19 @@ export class Esri4MapComponent implements OnInit {
   }
 
   loadMap() {
+    let mapPromise: Promise<any>;
+
     // determine if loading a WebMap or creating a custom map
-    if (this.portalItemId) {
-      // create one object containing the portalItemId and the map properties
-      const mapProperties = Object.assign({
-        portalItem: {
-          id: this.portalItemId
-        }
-      }, this.mapProperties);
+    if (this.mapProperties) {
+      mapPromise = this.mapService.loadMap(this.mapProperties, this.mapViewProperties, this.mapEl);
+    } else if (this.webMapProperties) {
+      mapPromise = this.mapService.loadWebMap(this.webMapProperties, this.mapViewProperties, this.mapEl);
+    } else {
+      console.error('Proper map properties were not provided');
+      return;
     }
 
-    this.mapService.loadMap(this.mapProperties, this.mapViewProperties, this.mapEl).then(mapInfo => {
+    mapPromise.then(mapInfo => {
       this.map = mapInfo.map;
       this.mapView = mapInfo.mapView;
 

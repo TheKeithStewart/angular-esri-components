@@ -15,12 +15,45 @@ export class Esri4MapService {
       url: '//js.arcgis.com/4.2'
     }).then(() => {
       return this.esriLoader.loadModules([
-        'esri/Map', 'esri/views/MapView', 'esri/WebMap'
+        'esri/Map', 'esri/views/MapView'
       ]).then(([
-        Map, MapView, WebMap
-      ]: [__esri.MapConstructor, __esri.MapViewConstructor, __esri.WebMapConstructor]) => {
+        Map, MapView
+      ]: [__esri.MapConstructor, __esri.MapViewConstructor]) => {
         // create map
-        let map = new WebMap(mapProperties);
+        let map = new Map(mapProperties);
+
+        // prepare properties that should be set locally
+        if (!mapViewProperties.container) mapViewProperties.container = mapEl.nativeElement.id;
+        if (!mapViewProperties.map) mapViewProperties.map = map;
+
+        // create the MapView
+        let mapView = new MapView(mapViewProperties);
+
+        this.map = map;
+        this.mapView = mapView;
+
+        this.isLoaded.emit();
+
+        return {
+          map: map,
+          mapView: mapView
+        }
+      });
+    });
+  }
+
+  loadWebMap(webMapProperties: __esri.WebMapProperties, mapViewProperties: __esri.MapViewProperties, mapEl: ElementRef) {
+    return this.esriLoader.load({
+      // the specific version of the API that is to be used
+      url: '//js.arcgis.com/4.2'
+    }).then(() => {
+      return this.esriLoader.loadModules([
+        'esri/views/MapView', 'esri/WebMap'
+      ]).then(([
+        MapView, WebMap
+      ]: [__esri.MapViewConstructor, __esri.WebMapConstructor]) => {
+        // create map
+        let map = new WebMap(webMapProperties);
 
         // prepare properties that should be set locally
         if (!mapViewProperties.container) mapViewProperties.container = mapEl.nativeElement.id;

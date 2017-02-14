@@ -1,3 +1,18 @@
+<a name="0.5.0"></a>
+# 0.5.0 (2017-02-14)
+
+### Features
+
+* add the webMapProperties input property on the esri4-map component to handle properties for WebMaps
+
+### Bug Fix
+
+* clean up the prepublish script
+
+### Breaking Changes
+
+* The portalItemId property is no longer an input property. It was replaced by the webMapProperties input property.
+
 <a name="0.3.0"></a>
 # 0.3.0 (2017-01-02)
 
