@@ -4,6 +4,7 @@
 ### Refactorings
 
 * add bundling and minification to the build process
+* add a CONTRIBUTING guide
 
 <a name="0.5.0"></a>
 # 0.5.0 (2017-02-14)
