@@ -1,0 +1,17 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "*.d.ts": true,
+    "*.js.map": true,
+    "src/**/*.js": true,
+    "src/**/*.js.map": true,
+    "index.js": true,
+    "*.ngsummary.json": true,
+    "*.ngfactory.ts": true,
+    "*.metadata.json": true
+  }
+}

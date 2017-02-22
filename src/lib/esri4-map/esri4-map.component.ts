@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, ElementRef, ViewChild, EventEmitter } from '@angular/core';
 
-import { Esri4MapService } from './../core';
+import { Esri4MapService } from './../core/index';
 
 @Component({
   selector: 'esri4-map',

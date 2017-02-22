@@ -3,8 +3,11 @@
   "version": "0.5.0",
   "description": "A set of Angular 2 components to work with ArcGIS API for JavaScript v4.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "ngc"
+    "cleanup": "rimraf bundles",
+    "bundling": "rollup -c",
+    "minify": "uglifyjs bundles/angular2-esri4.umd.js --screw-ie8 --compress --mangle --comments --output bundles/angular2-esri4.umd.min.js",
+    "build": "npm run cleanup && ngc && npm run bundling && npm run minify",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -17,7 +20,8 @@
   },
   "homepage": "https://github.com/kgs916/angular2-esri4-components#readme",
   "module": "index.js",
-  "typings": "./angular2-esri4-components.d.ts",
+  "main": "bundles/angular2-esri4.umd.js",
+  "typings": "index.d.ts",
   "dependencies": {
     "@angular/common": "^2.3.1",
     "@angular/compiler": "^2.3.1",
@@ -31,7 +35,11 @@
   },
   "devDependencies": {
     "@types/jasmine": "2.5.38",
-    "typescript": "~2.0.3"
+    "typescript": "~2.0.3",
+    "copyfiles": "^1.0.0",
+    "rimraf": "^2.5.4",
+    "rollup": "^0.37.0",
+    "uglify-js": "^2.7.5"
   },
   "peerDependencies": {
     "@angular/common": "^2.3.1",

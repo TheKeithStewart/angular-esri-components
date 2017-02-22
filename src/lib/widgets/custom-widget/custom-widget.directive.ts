@@ -1,6 +1,6 @@
 import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
-import { Esri4MapService } from './../../core';
+import { Esri4MapService } from './../../core/index';
 
 @Directive({
   selector: '[esri4-customWidget]'

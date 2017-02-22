@@ -1,9 +1,15 @@
 node_modules/*
 npm-debug.log
-*.js
-typings
 
+*.tgz
+
+// build files
+bundles
 *.d.ts
+*.js.map
+src/**/*.js
+src/**/*.js.map
+index.js
 
 // generated files from Angular Compiler
 *.ngsummary.json
