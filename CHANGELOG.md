@@ -1,10 +1,11 @@
 <a name="0.5.1"></a>
-# 0.5.1 (2017-??-??)
+# 0.5.1 (2017-03-05)
 
 ### Refactorings
 
 * add bundling and minification to the build process
 * add a CONTRIBUTING guide
+* rearrange the `dependencies`, `peerDependencies`, and `devDependencies` appropriately
 
 <a name="0.5.0"></a>
 # 0.5.0 (2017-02-14)
