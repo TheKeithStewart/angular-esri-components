@@ -1,3 +1,10 @@
+<a name="0.5.2"></a>
+# 0.5.2 (2017-03-16)
+
+### Features
+
+* add anchor tag that will zoom to a layer to the `layers-toggle` component
+
 <a name="0.5.1"></a>
 # 0.5.1 (2017-03-05)
 
