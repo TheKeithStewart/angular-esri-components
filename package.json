@@ -1,7 +1,7 @@
 {
   "name": "angular2-esri4-components",
   "version": "0.5.2",
-  "description": "A set of Angular 2 components to work with ArcGIS API for JavaScript v4.1",
+  "description": "A set of Angular 2 components to work with ArcGIS API for JavaScript v4.3",
   "scripts": {
     "cleanup": "rimraf bundles",
     "bundling": "rollup -c",
@@ -23,7 +23,7 @@
   "main": "bundles/angular2-esri4.umd.js",
   "typings": "index.d.ts",
   "dependencies": {
-    "@types/arcgis-js-api": "^4.2.0",
+    "@types/arcgis-js-api": "^4.3.0",
     "angular2-esri-loader": "^0.1.10"
   },
   "devDependencies": {

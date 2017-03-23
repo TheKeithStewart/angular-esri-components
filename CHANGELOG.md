@@ -1,3 +1,10 @@
+<a name="0.5.3"></a>
+# 0.5.3 (2017/03/23)
+
+### Refactorings
+
+* upgraded to ArcGIS API for JavaScript v4.3
+
 <a name="0.5.2"></a>
 # 0.5.2 (2017-03-16)
 

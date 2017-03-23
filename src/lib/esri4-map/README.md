@@ -1,6 +1,6 @@
 # esri4-map
 
-`esri4-map` is a component that will create an ESRI map using the [ArcGIS API for JavaScript v4.2](https://developers.arcgis.com/javascript/)
+`esri4-map` is a component that will create an ESRI map using the [ArcGIS API for JavaScript v4.3](https://developers.arcgis.com/javascript/)
 
 ## Usage
 
