@@ -1,3 +1,10 @@
+<a name="0.5.4"></a>
+# 0.5.4 (2017/03/24)
+
+### Bug Fix
+
+* in `esri4-map.service`, create a new object to modify rather than making changes to the `mapViewProperties` object that is provided as an argument to functions
+
 <a name="0.5.3"></a>
 # 0.5.3 (2017/03/23)
 

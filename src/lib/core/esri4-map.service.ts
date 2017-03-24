@@ -23,11 +23,13 @@ export class Esri4MapService {
         let map = new Map(mapProperties);
 
         // prepare properties that should be set locally
-        if (!mapViewProperties.container) mapViewProperties.container = mapEl.nativeElement.id;
-        if (!mapViewProperties.map) mapViewProperties.map = map;
+        // create a new object so as to not modify the provided object
+        let newMapViewProps = this.extend({}, mapViewProperties);
+        if (!newMapViewProps.container) newMapViewProps.container = mapEl.nativeElement.id;
+        if (!newMapViewProps.map) newMapViewProps.map = map;
 
         // create the MapView
-        let mapView = new MapView(mapViewProperties);
+        let mapView = new MapView(newMapViewProps);
 
         this.map = map;
         this.mapView = mapView;
@@ -56,11 +58,13 @@ export class Esri4MapService {
         let map = new WebMap(webMapProperties);
 
         // prepare properties that should be set locally
-        if (!mapViewProperties.container) mapViewProperties.container = mapEl.nativeElement.id;
-        if (!mapViewProperties.map) mapViewProperties.map = map;
+        // create a new object so as to not modify the provided object
+        let newMapViewProps = this.extend({}, mapViewProperties);
+        if (!newMapViewProps.container) newMapViewProps.container = mapEl.nativeElement.id;
+        if (!newMapViewProps.map) newMapViewProps.map = map;
 
         // create the MapView
-        let mapView = new MapView(mapViewProperties);
+        let mapView = new MapView(newMapViewProps);
 
         this.map = map;
         this.mapView = mapView;
@@ -77,5 +81,10 @@ export class Esri4MapService {
 
   addWidget(element: HTMLElement, position: string) {
     this.mapView.ui.add(element, position);
+  }
+
+  extend(obj: any, src: any) {
+    Object.keys(src).forEach(function (key) { obj[key] = src[key]; });
+    return obj;
   }
 }
