@@ -1,6 +1,6 @@
 {
   "name": "angular2-esri4-components",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "A set of Angular 2 components to work with ArcGIS API for JavaScript v4.3",
   "scripts": {
     "cleanup": "rimraf bundles",
