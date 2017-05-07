@@ -1,3 +1,10 @@
+<a name="0.5.5"></a>
+# 0.5.5 (2017/05/07)
+
+### Refactorings
+
+* use the full url for getting the ESRI library
+
 <a name="0.5.4"></a>
 # 0.5.4 (2017/03/24)
 
