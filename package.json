@@ -24,7 +24,7 @@
   "typings": "index.d.ts",
   "dependencies": {
     "@types/arcgis-js-api": "^4.3.0",
-    "angular2-esri-loader": "^0.1.10"
+    "angular-esri-loader": "^1.1.0"
   },
   "devDependencies": {
     "@angular/common": "^2.3.1",
@@ -41,7 +41,7 @@
     "uglify-js": "^2.7.5"
   },
   "peerDependencies": {
-    "@angular/common": "^2.3.1",
-    "@angular/core": "^2.3.1"
+    "@angular/common": "^2.3.1 || ^4.0.0",
+    "@angular/core": "^2.3.1 || ^4.0.0"
   }
 }

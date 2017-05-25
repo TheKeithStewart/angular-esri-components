@@ -6,12 +6,14 @@ import {
   CustomWidgetDirective,
   LayersToggleComponent
 } from './lib/index';
+import { EsriLoaderModule } from 'angular-esri-loader';
 
 export * from './lib/esri4-map/esri4-map.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    EsriLoaderModule
   ],
   declarations: [
     Esri4MapComponent,

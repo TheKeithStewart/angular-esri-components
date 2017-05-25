@@ -1,3 +1,10 @@
+<a name="1.0.0"></a>
+# 1.0.0 (2017/05/25)
+
+### Refactorings
+
+* upgrade to use the `angular-esri-loader` module.  removed `angular2-esri-loader`.
+
 <a name="0.5.5"></a>
 # 0.5.5 (2017/05/07)
 
