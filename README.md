@@ -29,21 +29,7 @@ npm install --save angular2-esri4-components
  
 ## Setup
 
-Import CSS for ArcGIS API for JavaScript v4 into the head of your index.html:
-
-```html
-<!doctype html>
-<html>
-<head>
-  <!-- ... -->
-  <link rel="stylesheet" href="https://js.arcgis.com/4.3/esri/css/main.css">
-  <!-- ... -->
-</head>
-<body>
-  <app-root>Loading...</app-root>
-</body>
-</html>
-```
+**Note:** It is no longer necessary to add an import statement into your `index.html` file for the ESRI CSS.  This has been included in the styles for the map component.  If you have an existing import of the ESRI CSS in your application you should remove it.
 
 Include `Angular2Esri4Module` in your main module:
 

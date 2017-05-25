@@ -5,6 +5,10 @@
 
 * upgrade to use the `angular-esri-loader` module.  removed `angular2-esri-loader`.
 
+### Breaking Changes
+
+* the ESRI CSS is now imported in the styles of the map component in this library and imports of this CSS in applications using this library should be removed
+
 <a name="0.5.5"></a>
 # 0.5.5 (2017/05/07)
 

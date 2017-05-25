@@ -8,6 +8,9 @@ import { Esri4MapService } from './../core/index';
     <div class="map" id="esri4-map" #map></div>
   `,
   styles: [`
+    /* Required CSS for the ArcGIS API for JavaScript */
+    @import '//js.arcgis.com/4.3/esri/css/main.css';
+
     .map {
       height: 100%;
       width: 100%;
