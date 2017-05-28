@@ -2,7 +2,7 @@ import { Injectable, ElementRef, EventEmitter } from '@angular/core';
 import { EsriLoaderService } from 'angular-esri-loader';
 
 @Injectable()
-export class Esri4MapService {
+export class EsriMapService {
   isLoaded = new EventEmitter();
   map: __esri.Map;
   mapView: __esri.MapView;

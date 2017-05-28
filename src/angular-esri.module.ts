@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
-  Esri4MapComponent,
-  Esri4MapService,
+  EsriMapComponent,
+  EsriMapService,
   CustomWidgetDirective,
   LayersToggleComponent
 } from './lib/index';
 import { EsriLoaderModule } from 'angular-esri-loader';
 
-export * from './lib/esri4-map/esri4-map.component';
+export * from './lib/esri-map/esri-map.component';
 
 @NgModule({
   imports: [
@@ -16,17 +16,17 @@ export * from './lib/esri4-map/esri4-map.component';
     EsriLoaderModule
   ],
   declarations: [
-    Esri4MapComponent,
+    EsriMapComponent,
     CustomWidgetDirective,
     LayersToggleComponent
   ],
   exports: [
-    Esri4MapComponent,
+    EsriMapComponent,
     CustomWidgetDirective,
     LayersToggleComponent
   ],
   providers: [
-    Esri4MapService
+    EsriMapService
   ]
 })
-export class Angular2Esri4Module { }
+export class AngularEsriModule { }

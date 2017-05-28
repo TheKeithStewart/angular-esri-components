@@ -1,1 +1,1 @@
-export * from './src/angular2-esri4.module';
+export * from './src/angular-esri.module';

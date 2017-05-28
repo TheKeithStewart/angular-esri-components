@@ -1,26 +1,26 @@
 {
-  "name": "angular2-esri4-components",
+  "name": "angular-esri-components",
   "version": "0.5.5",
-  "description": "A set of Angular 2 components to work with ArcGIS API for JavaScript v4.3",
+  "description": "A set of Angular components to work with ArcGIS API for JavaScript v4.3",
   "scripts": {
     "cleanup": "rimraf bundles",
     "bundling": "rollup -c",
-    "minify": "uglifyjs bundles/angular2-esri4.umd.js --screw-ie8 --compress --mangle --comments --output bundles/angular2-esri4.umd.min.js",
+    "minify": "uglifyjs bundles/angular-esri.umd.js --screw-ie8 --compress --mangle --comments --output bundles/angular-esri.umd.min.js",
     "build": "npm run cleanup && ngc && npm run bundling && npm run minify",
     "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kgs916/angular2-esri4-components.git"
+    "url": "git+https://github.com/kgs916/angular-esri-components.git"
   },
   "author": "Keith Stewart (kgstewart@gmail.com)",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/kgs916/angular2-esri4-components/issues"
+    "url": "https://github.com/kgs916/angular-esri-components/issues"
   },
-  "homepage": "https://github.com/kgs916/angular2-esri4-components#readme",
+  "homepage": "https://github.com/kgs916/angular-esri-components#readme",
   "module": "index.js",
-  "main": "bundles/angular2-esri4.umd.js",
+  "main": "bundles/angular-esri.umd.js",
   "typings": "index.d.ts",
   "dependencies": {
     "@types/arcgis-js-api": "^4.3.0",

@@ -1,19 +1,19 @@
-# esri4-map
+# esri-map
 
-`esri4-map` is a component that will create an ESRI map using the [ArcGIS API for JavaScript v4.3](https://developers.arcgis.com/javascript/)
+`esri-map` is a component that will create an ESRI map using the [ArcGIS API for JavaScript v4.3](https://developers.arcgis.com/javascript/)
 
 ## Usage
 
 ```
 import { Component, OnInit, ViewChild } from '@angular/core';
 
-import { EsriLoaderService } from 'angular2-esri-loader';
-import { Esri4MapComponent } from 'angular2-esri4-components';
+import { EsriLoaderService } from 'angular-esri-loader';
+import { EsriMapComponent } from 'angular-esri-components';
 
 @Component({
   selector: 'app-map',
   template: `
-    <esri4-map [mapProperties]="mapProperties" [mapViewProperties]="mapViewProperties" (mapInit)="onMapInit($event)"></esri4-map>
+    <esri-map [mapProperties]="mapProperties" [mapViewProperties]="mapViewProperties" (mapInit)="onMapInit($event)"></esri-map>
   `,
   styleUrls: ['./map.component.scss'],
   providers: [EsriLoaderService]
@@ -29,7 +29,7 @@ export class MapComponent implements OnInit {
   map: __esri.Map;
   mapView: __esri.MapView;
 
-  @ViewChild(Esri4MapComponent) esriComponent: Esri4MapComponent;
+  @ViewChild(EsriMapComponent) esriComponent: EsriMapComponent;
 
   constructor(private esriLoader: EsriLoaderService) { }
 

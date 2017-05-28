@@ -1,9 +1,9 @@
 import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
-import { Esri4MapService } from './../../core/index';
+import { EsriMapService } from './../../core/index';
 
 @Directive({
-  selector: '[esri4-customWidget]'
+  selector: '[esri-customWidget]'
 })
 export class CustomWidgetDirective implements OnInit {
 
@@ -11,7 +11,7 @@ export class CustomWidgetDirective implements OnInit {
 
   private el: HTMLElement;
 
-  constructor(el: ElementRef, private mapService: Esri4MapService) {
+  constructor(el: ElementRef, private mapService: EsriMapService) {
     this.el = el.nativeElement;
   }
 

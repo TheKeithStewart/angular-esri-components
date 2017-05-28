@@ -1,9 +1,9 @@
 export default {
   entry: 'index.js',
-  dest: 'bundles/angular2-esri4.umd.js',
+  dest: 'bundles/angular-esri.umd.js',
   sourceMap: false,
   format: 'umd',
-  moduleName: 'ng.angular2Esri4',
+  moduleName: 'ng.angularEsri',
   globals: {
     '@angular/core': 'ng.core',
     '@angular/common': 'ng.common',

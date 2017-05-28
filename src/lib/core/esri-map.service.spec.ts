@@ -1,16 +1,16 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { Esri4MapService } from './esri4-map.service';
+import { EsriMapService } from './esri-map.service';
 
-describe('Service: Esri4Map', () => {
+describe('Service: EsriMap', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [Esri4MapService]
+      providers: [EsriMapService]
     });
   });
 
-  it('should ...', inject([Esri4MapService], (service: Esri4MapService) => {
+  it('should ...', inject([EsriMapService], (service: EsriMapService) => {
     expect(service).toBeTruthy();
   }));
 });

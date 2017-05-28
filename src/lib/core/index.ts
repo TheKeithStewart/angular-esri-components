@@ -1,1 +1,1 @@
-export * from './esri4-map.service';
+export * from './esri-map.service';

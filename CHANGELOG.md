@@ -1,5 +1,5 @@
 <a name="1.0.0"></a>
-# 1.0.0 (2017/05/25)
+# 1.0.0 (2017/05/28)
 
 ### Refactorings
 
@@ -7,6 +7,7 @@
 
 ### Breaking Changes
 
+* *** **RENAME REPO AND NPM PACKAGE** *** This repo was renamed to `angular-esri-components`.  All NgModules, Components, and Services within it were renamed accordingly.
 * the ESRI CSS is now imported in the styles of the map component in this library and imports of this CSS in applications using this library should be removed
 
 <a name="0.5.5"></a>

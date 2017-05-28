@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, Output, ElementRef, ViewChild, EventEmitter } from '@angular/core';
 
-import { Esri4MapService } from './../core/index';
+import { EsriMapService } from './../core/index';
 
 @Component({
-  selector: 'esri4-map',
+  selector: 'esri-map',
   template: `
-    <div class="map" id="esri4-map" #map></div>
+    <div class="map" id="esri-map" #map></div>
   `,
   styles: [`
     /* Required CSS for the ArcGIS API for JavaScript */
@@ -19,7 +19,7 @@ import { Esri4MapService } from './../core/index';
     }
   `]
 })
-export class Esri4MapComponent implements OnInit {
+export class EsriMapComponent implements OnInit {
   map: __esri.Map;
   mapView: __esri.MapView;
 
@@ -31,7 +31,7 @@ export class Esri4MapComponent implements OnInit {
 
   @Output() mapInit = new EventEmitter();
 
-  constructor(private mapService: Esri4MapService) { }
+  constructor(private mapService: EsriMapService) { }
 
   ngOnInit() {
     if (this.map) {
