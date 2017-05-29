@@ -9,7 +9,7 @@ import { EsriMapService } from './../core/index';
   `,
   styles: [`
     /* Required CSS for the ArcGIS API for JavaScript */
-    @import '//js.arcgis.com/4.3/esri/css/main.css';
+    @import 'http://js.arcgis.com/4.3/esri/css/main.css';
 
     .map {
       height: 100%;

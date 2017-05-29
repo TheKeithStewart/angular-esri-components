@@ -1,3 +1,10 @@
+<a name="1.0.1"></a>
+# 1.0.1 (2017/05/28)
+
+### Refactorings
+
+* use the full url for getting the ESRI CSS
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017/05/28)
 
