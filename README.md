@@ -20,12 +20,12 @@ npm install --save angular-esri-components
 | esri-layersToggle  |                           Available | [README][3]  |      [#6][006] |
 | (more coming)      |                                     |              |              - |
 
- [1]: https://github.com/kgs916/angular-esri-components/blob/master/src/lib/esri-map/README.md
- [2]: https://github.com/kgs916/angular-esri-components/blob/master/src/lib/widgets/custom-widget/README.md
- [3]: https://github.com/kgs916/angular-esri-components/blob/master/src/lib/widgets/layers-toggle/README.md
+ [1]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/src/lib/esri-map/README.md
+ [2]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/src/lib/widgets/custom-widget/README.md
+ [3]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/src/lib/widgets/layers-toggle/README.md
 
- [004]: https://github.com/kgs916/angular-esri-components/issues/4
- [006]: https://github.com/kgs916/angular-esri-components/issues/6
+ [004]: https://github.com/TheKeithStewart/angular-esri-components/issues/4
+ [006]: https://github.com/TheKeithStewart/angular-esri-components/issues/6
  
 ## Setup
 

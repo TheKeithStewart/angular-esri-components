@@ -1,3 +1,11 @@
+<a name="1.0.2"></a>
+# 1.0.2 (2017/05/29)
+
+### Refactorings
+
+* fix issues with links in the main README.md file
+* cleanup usage example for `esri-map` component
+
 <a name="1.0.1"></a>
 # 1.0.1 (2017/05/28)
 

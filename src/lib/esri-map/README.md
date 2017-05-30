@@ -5,10 +5,9 @@
 ## Usage
 
 ```
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { EsriLoaderService } from 'angular-esri-loader';
-import { EsriMapComponent } from 'angular-esri-components';
 
 @Component({
   selector: 'app-map',
@@ -18,7 +17,7 @@ import { EsriMapComponent } from 'angular-esri-components';
   styleUrls: ['./map.component.scss'],
   providers: [EsriLoaderService]
 })
-export class MapComponent implements OnInit {
+export class MapComponent {
   mapProperties: __esri.MapProperties = {
     basemap: 'dark-gray'
   };
@@ -29,11 +28,7 @@ export class MapComponent implements OnInit {
   map: __esri.Map;
   mapView: __esri.MapView;
 
-  @ViewChild(EsriMapComponent) esriComponent: EsriMapComponent;
-
   constructor(private esriLoader: EsriLoaderService) { }
-
-  ngOnInit() { }
 
   onMapInit(mapInfo: {map: __esri.Map, mapView: __esri.MapView}) {
     this.map = mapInfo.map;
