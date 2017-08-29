@@ -7,7 +7,7 @@ import { EsriMapService } from './../../core/index';
   template: `
     <div esri-customWidget [position]="position">
       <!-- Only display if there is a map and it has layers -->
-      <div *ngIf="map?.layers.toArray().length > 0" class="esri-layers-toggle">
+      <div *ngIf="map?.layers.length > 0" class="esri-layers-toggle">
         <div *ngFor="let layer of map.layers.toArray()">
           <input type="checkbox" [attr.checked]="layer.visible" (click)="onCheck($event, layer)" /> {{layer.title}}
           <a href="javascript:void(0)" (click)="onZoomLayer(layer)">Zoom</a>
