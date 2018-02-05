@@ -2,7 +2,7 @@
 [![npm version](https://badge.fury.io/js/angular-esri-components.svg)](https://badge.fury.io/js/angular-esri-components)
 
 A set of Angular components to work with [ArcGIS API for JavaScript v4.3](https://developers.arcgis.com/javascript/)
-
+test
 ## Setup
 
 ```
