@@ -11,8 +11,11 @@ bundles
 src/**/*.js
 src/**/*.js.map
 index.js
+*.ps1
 
 // generated files from Angular Compiler
 *.ngsummary.json
 *.ngfactory.ts
 *.metadata.json
+build.ps1
+deploy.ps1
