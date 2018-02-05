@@ -1,1 +1,0 @@
- copy-item built\* C:\Data\angular\my-app\node_modules\angular-esri-components\ -recurse -Force
