@@ -1,12 +1,14 @@
-# angular-esri-components
-[![npm version](https://badge.fury.io/js/angular-esri-components.svg)](https://badge.fury.io/js/angular-esri-components)
+# angularx-esri-components
+[![npm version](https://badge.fury.io/js/angularx-esri-components.svg)](https://badge.fury.io/js/angularx-esri-components)
+
+This is a beta version!
 
 A set of Angular components to work with [ArcGIS API for JavaScript v4.6](https://developers.arcgis.com/javascript/)
 
 ## Setup
 
 ```
-npm install --save angular-esri-components
+npm install --save angularx-esri-components
 ```
 
 ## Component status:
@@ -20,12 +22,12 @@ npm install --save angular-esri-components
 | esri-layersToggle  |                           Available | [README][3]  |      [#6][006] |
 | (more coming)      |                                     |              |              - |
 
- [1]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/src/lib/esri-map/README.md
- [2]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/src/lib/widgets/custom-widget/README.md
- [3]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/src/lib/widgets/layers-toggle/README.md
+ [1]: https://github.com/JordeyWijnbergen/angularx-esri-components/blob/master/src/lib/esri-map/README.md
+ [2]: https://github.com/JordeyWijnbergen/angularx-esri-components/blob/master/src/lib/widgets/custom-widget/README.md
+ [3]: https://github.com/JordeyWijnbergen/angularx-esri-components/blob/master/src/lib/widgets/layers-toggle/README.md
 
- [004]: https://github.com/TheKeithStewart/angular-esri-components/issues/4
- [006]: https://github.com/TheKeithStewart/angular-esri-components/issues/6
+ [004]: https://github.com/JordeyWijnbergen/angularx-esri-components/issues/4
+ [006]: https://github.com/JordeyWijnbergen/angularx-esri-components/issues/6
  
 ## Setup
 

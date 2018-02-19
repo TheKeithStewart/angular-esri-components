@@ -1,7 +1,7 @@
 {
-    "name": "angular-esri-components",
-    "version": "1.0.2",
-    "description": "A set of Angular components to work with ArcGIS API for JavaScript v4.6",
+    "name": "angularx-esri-components",
+    "version": "1.1.0-beta.0",
+    "description": "A set of Angular components to work with ArcGIS API for JavaScript v4.6 and angular 5",
     "scripts": {
         "cleanup": "rimraf bundles",
         "bundling": "rollup -c",
@@ -11,14 +11,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/kgs916/angular-esri-components.git"
+        "url": "git+https://github.com/JordeyWijnbergen/angularx-esri-components.git"
     },
     "author": "Keith Stewart (kgstewart@gmail.com)",
     "license": "Apache-2.0",
     "bugs": {
-        "url": "https://github.com/kgs916/angular-esri-components/issues"
+        "url": "https://github.com/JordeyWijnbergen/angularx-esri-components/issues"
     },
-    "homepage": "https://github.com/kgs916/angular-esri-components#readme",
+    "homepage": "https://github.com/JordeyWijnbergen/angularx-esri-components#readme",
     "module": "index.js",
     "main": "bundles/angular-esri.umd.js",
     "typings": "index.d.ts",
