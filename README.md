@@ -3,7 +3,7 @@
 
 This is a beta version!
 
-A set of Angular components to work with [ArcGIS API for JavaScript v4.6](https://developers.arcgis.com/javascript/)
+A set of Angular components to work with  angular 5 and [ArcGIS API for JavaScript v4.6](https://developers.arcgis.com/javascript/)
 
 ## Setup
 
