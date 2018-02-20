@@ -1,6 +1,7 @@
 # Node generated files
 node_modules
 npm-debug.log
+built
 
 # OS generated files
 Thumbs.db
@@ -9,6 +10,8 @@ Thumbs.db
 # Ignored files
 *.ts
 !*.d.ts
+*.ps1
+tslint.json
 
 // IDEs
 .vscode

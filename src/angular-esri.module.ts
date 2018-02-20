@@ -4,7 +4,8 @@ import {
   EsriMapComponent,
   EsriMapService,
   CustomWidgetDirective,
-  LayersToggleComponent
+  LayersToggleComponent,
+  EsriModuleProvider
 } from './lib/index';
 import { EsriLoaderModule } from 'angular-esri-loader';
 
@@ -26,7 +27,8 @@ export * from './lib/esri-map/esri-map.component';
     LayersToggleComponent
   ],
   providers: [
-    EsriMapService
+    EsriMapService,
+    EsriModuleProvider
   ]
 })
 export class AngularEsriModule { }

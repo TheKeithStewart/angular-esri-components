@@ -44,7 +44,7 @@
 
 ### Refactorings
 
-* upgraded to ArcGIS API for JavaScript v4.3
+* upgraded to ArcGIS API for JavaScript v4.6
 
 <a name="0.5.2"></a>
 # 0.5.2 (2017-03-16)
