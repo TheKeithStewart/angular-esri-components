@@ -28,8 +28,8 @@
   "angularCompilerOptions": {
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
-    "genDir": "../generated",
-    "outDir": "built/",
+    // "genDir": "../generated",
+    // "outDir": "built/",
         // rootDirs for resolution of relative imports
         "rootDirs": [
           "src",    // for authored sources

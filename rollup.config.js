@@ -1,5 +1,5 @@
 export default {
-    entry: './built/index.js',
+    entry: 'index.js',
     dest: 'bundles/angular-esri.umd.js',
     sourceMap: false,
     format: 'umd',
