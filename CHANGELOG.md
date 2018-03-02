@@ -1,4 +1,9 @@
 <a name="1.0.2"></a>
+# 1.0.3 (2018/03/02)
+ * upgrade to arcgis js 4.6
+ * added module provider
+ * fixed links to the new reposity name
+
 # 1.0.2 (2017/05/29)
 
 ### Refactorings
