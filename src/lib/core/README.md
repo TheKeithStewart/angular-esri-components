@@ -32,6 +32,11 @@ export class MapComponent {
   onMapInit(mapInfo: {map: __esri.Map, mapView: __esri.MapView}) {
     this.map = mapInfo.map;
     this.mapView = mapInfo.mapView;
+       this.moduleProvider.require(['esri/core/watchUtils'])
+      .then(([watchUtils]) => {
+          // your code
+      });
   }
+
 }
 ```
