@@ -1,5 +1,7 @@
 import { Injectable, ElementRef, EventEmitter } from '@angular/core';
 import { EsriLoaderService } from 'angular-esri-loader';
+import { environment } from '../../environments/environment';
+import { EsriModuleProvider } from './index';
 
 @Injectable()
 export class EsriMapService {
@@ -7,29 +9,24 @@ export class EsriMapService {
   map: __esri.Map;
   mapView: __esri.MapView;
 
-  constructor(private esriLoader: EsriLoaderService) { }
+  constructor(private esriLoader: EsriLoaderService, private moduleProvider: EsriModuleProvider) { }
 
   loadMap(mapProperties: __esri.MapProperties, mapViewProperties: __esri.MapViewProperties, mapEl: ElementRef) {
-    return this.esriLoader.load({
-      // the specific version of the API that is to be used
-      url: 'https://js.arcgis.com/4.3/'
-    }).then(() => {
-      return this.esriLoader.loadModules([
-        'esri/Map', 'esri/views/MapView'
-      ]).then(([
-        Map, MapView
-      ]: [__esri.MapConstructor, __esri.MapViewConstructor]) => {
+    return this.moduleProvider.require(['esri/Map', 'esri/views/MapView'])
+      .then(([Map, MapView]: [__esri.MapConstructor, __esri.MapViewConstructor]) => {
         // create map
-        let map = new Map(mapProperties);
+        const map = new Map(mapProperties);
 
         // prepare properties that should be set locally
         // create a new object so as to not modify the provided object
-        let newMapViewProps = this.extend({}, mapViewProperties);
-        if (!newMapViewProps.container) newMapViewProps.container = mapEl.nativeElement.id;
-        if (!newMapViewProps.map) newMapViewProps.map = map;
+        const newMapViewProps = this.extend({}, mapViewProperties);
+        if (!newMapViewProps.container) { newMapViewProps.container = mapEl.nativeElement.id; }
+        if (!newMapViewProps.map) {
+          newMapViewProps.map = map;
+        }
 
         // create the MapView
-        let mapView = new MapView(newMapViewProps);
+        const mapView = new MapView(newMapViewProps);
 
         this.map = map;
         this.mapView = mapView;
@@ -39,32 +36,24 @@ export class EsriMapService {
         return {
           map: map,
           mapView: mapView
-        }
+        };
       });
-    });
   }
 
   loadWebMap(webMapProperties: __esri.WebMapProperties, mapViewProperties: __esri.MapViewProperties, mapEl: ElementRef) {
-    return this.esriLoader.load({
-      // the specific version of the API that is to be used
-      url: 'https://js.arcgis.com/4.3/'
-    }).then(() => {
-      return this.esriLoader.loadModules([
-        'esri/views/MapView', 'esri/WebMap'
-      ]).then(([
-        MapView, WebMap
-      ]: [__esri.MapViewConstructor, __esri.WebMapConstructor]) => {
+    return this.moduleProvider.require(['esri/views/MapView', 'esri/WebMap'])
+    .then(([MapView, WebMap]: [__esri.MapViewConstructor, __esri.WebMapConstructor]) => {
         // create map
-        let map = new WebMap(webMapProperties);
+        const map = new WebMap(webMapProperties);
 
         // prepare properties that should be set locally
         // create a new object so as to not modify the provided object
-        let newMapViewProps = this.extend({}, mapViewProperties);
-        if (!newMapViewProps.container) newMapViewProps.container = mapEl.nativeElement.id;
-        if (!newMapViewProps.map) newMapViewProps.map = map;
+        const newMapViewProps = this.extend({}, mapViewProperties);
+        if (!newMapViewProps.container) { newMapViewProps.container = mapEl.nativeElement.id; }
+        if (!newMapViewProps.map) { newMapViewProps.map = map; }
 
         // create the MapView
-        let mapView = new MapView(newMapViewProps);
+        const mapView = new MapView(newMapViewProps);
 
         this.map = map;
         this.mapView = mapView;
@@ -74,8 +63,7 @@ export class EsriMapService {
         return {
           map: map,
           mapView: mapView
-        }
-      });
+        };
     });
   }
 

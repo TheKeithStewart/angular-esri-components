@@ -1,6 +1,10 @@
-# esri-map
+# EsriModuleProvider
 
-`esri-map` is a component that will create an ESRI map using the [ArcGIS API for JavaScript v4.6](https://developers.arcgis.com/javascript/)
+`EsriModuleProvider`  a component which abstracts the esri loader component using [ArcGIS API for JavaScript v4.6](https://developers.arcgis.com/javascript/)
+
+An example with the Search widget using constructors can be found here:
+https://github.com/JordeyWijnbergen/angular-esri-arcgis-example
+
 
 ## Usage
 
@@ -32,6 +36,12 @@ export class MapComponent {
   onMapInit(mapInfo: {map: __esri.Map, mapView: __esri.MapView}) {
     this.map = mapInfo.map;
     this.mapView = mapInfo.mapView;
+    
+    this.moduleProvider.require(['esri/core/watchUtils'])
+        .then(([watchUtils]) => {
+                // your code
+        });
   }
+
 }
 ```
