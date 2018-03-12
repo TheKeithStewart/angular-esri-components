@@ -1,5 +1,4 @@
 import { Injectable, ElementRef, EventEmitter } from '@angular/core';
-import { EsriLoaderService } from 'angular-esri-loader';
 import { EsriModuleProvider } from './index';
 
 @Injectable()
@@ -8,7 +7,7 @@ export class EsriMapService {
   map: __esri.Map;
   mapView: __esri.MapView;
 
-  constructor(private esriLoader: EsriLoaderService, private moduleProvider: EsriModuleProvider) { }
+  constructor(private moduleProvider: EsriModuleProvider) { }
 
   loadMap(mapProperties: __esri.MapProperties, mapViewProperties: __esri.MapViewProperties, mapEl: ElementRef) {
     return this.moduleProvider.require(['esri/Map', 'esri/views/MapView'])

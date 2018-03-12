@@ -11,7 +11,7 @@ https://github.com/JordeyWijnbergen/angular-esri-arcgis-example
 ```
 import { Component } from '@angular/core';
 
-import { EsriModuleProvider } from 'angular-esri-components/src/lib/core';
+import { EsriModuleProvider } from 'angular-esri-components';
 
 @Component({
   selector: 'app-map',
