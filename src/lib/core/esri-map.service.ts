@@ -1,6 +1,5 @@
 import { Injectable, ElementRef, EventEmitter } from '@angular/core';
 import { EsriLoaderService } from 'angular-esri-loader';
-import { environment } from '../../environments/environment';
 import { EsriModuleProvider } from './index';
 
 @Injectable()

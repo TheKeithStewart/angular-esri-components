@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
   `,
   styles: [`
   /* Required CSS for the ArcGIS API for JavaScript */
-  @import '` + environment.arcGisCssUrl + `';
+  @import '${environment.arcGisCssUrl}';
 
   .map {
     height: 100%;
