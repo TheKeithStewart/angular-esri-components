@@ -10,6 +10,7 @@ import {
 import { EsriLoaderModule } from 'angular-esri-loader';
 
 export * from './lib/esri-map/esri-map.component';
+export * from './lib/core/esri-module-provider';
 
 @NgModule({
   imports: [
