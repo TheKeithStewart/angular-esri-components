@@ -1,6 +1,6 @@
 # EsriModuleProvider
 
-`EsriModuleProvider`  a component which abstracts the esri loader component using [ArcGIS API for JavaScript v4.6](https://developers.arcgis.com/javascript/)
+`EsriModuleProvider`  a service which abstracts the esri loader using [ArcGIS API for JavaScript v4.6](https://developers.arcgis.com/javascript/)
 
 An example with the Search widget using constructors can be found here:
 https://github.com/JordeyWijnbergen/angular-esri-arcgis-example
