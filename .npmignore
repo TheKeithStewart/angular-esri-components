@@ -9,6 +9,7 @@ Thumbs.db
 # Ignored files
 *.ts
 !*.d.ts
+tslint.json
 
 // IDEs
 .vscode

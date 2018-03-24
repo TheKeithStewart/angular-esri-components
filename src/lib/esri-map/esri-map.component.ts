@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, ElementRef, ViewChild, EventEmitter } from '@angular/core';
-
 import { EsriMapService } from './../core/index';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'esri-map',
@@ -8,16 +8,16 @@ import { EsriMapService } from './../core/index';
     <div class="map" id="esri-map" #map></div>
   `,
   styles: [`
-    /* Required CSS for the ArcGIS API for JavaScript */
-    @import 'http://js.arcgis.com/4.3/esri/css/main.css';
+  /* Required CSS for the ArcGIS API for JavaScript */
+  @import '${environment.arcGisCssUrl}';
 
-    .map {
-      height: 100%;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-  `]
+  .map {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+    ` ]
 })
 export class EsriMapComponent implements OnInit {
   map: __esri.Map;
