@@ -1,7 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
-
+import { Component, OnInit, Input/*, Pipe*/ } from '@angular/core';
 import { EsriMapService } from './../../core/index';
-
+/*@Pipe({
+  name: 'reverse'
+})
+export class ReversePipe {
+  transform(value:any) {
+    return value.slice().reverse();
+  }
+}*/
 @Component({
   selector: 'esri-layersToggle',
   template: `
@@ -9,8 +15,18 @@ import { EsriMapService } from './../../core/index';
       <!-- Only display if there is a map and it has layers -->
       <div *ngIf="map?.layers.length > 0" class="esri-layers-toggle">
         <div *ngFor="let layer of map.layers.toArray()">
-          <input type="checkbox" [attr.checked]="layer.visible" (click)="onCheck($event, layer)" /> {{layer.title}}
+          <input type="checkbox" [checked]="layer.visible" (click)="onCheck($event, layer)" /> {{layer.title}}
           <a href="javascript:void(0)" (click)="onZoomLayer(layer)">Zoom</a>
+          <div *ngIf="layer.sublayers && layer.sublayers.items">
+            <div *ngFor="let lay of layer.sublayers.items.slice().reverse()">
+              &nbsp;&nbsp;&nbsp;<input type="checkbox" [checked]="lay.visible" (click)="onCheck($event, lay)" /> {{lay.title}}
+              <div *ngIf="lay.sublayers && lay.sublayers.items">
+                  <div *ngFor="let sl of lay.sublayers.items.slice().reverse()">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" [checked]="sl.visible" (click)="onCheck($event, sl)" /> {{sl.title}}
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
       </div>
     </div>
