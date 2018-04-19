@@ -18,10 +18,10 @@ export class ReversePipe {
           <input type="checkbox" [checked]="layer.visible" (click)="onCheck($event, layer)" /> {{layer.title}}
           <a href="javascript:void(0)" (click)="onZoomLayer(layer)">Zoom</a>
           <div *ngIf="layer.sublayers && layer.sublayers.items">
-            <div *ngFor="let lay of layer.sublayers.items.reverse()">
+            <div *ngFor="let lay of layer.sublayers.items.slice().reverse()">
               &nbsp;&nbsp;&nbsp;<input type="checkbox" [checked]="lay.visible" (click)="onCheck($event, lay)" /> {{lay.title}}
               <div *ngIf="lay.sublayers && lay.sublayers.items">
-                  <div *ngFor="let sl of lay.sublayers.items">
+                  <div *ngFor="let sl of lay.sublayers.items.slice().reverse()">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" [checked]="sl.visible" (click)="onCheck($event, sl)" /> {{sl.title}}
                   </div>
                 </div>
