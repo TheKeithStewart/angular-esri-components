@@ -44,7 +44,7 @@ export class ReversePipe {
 export class LayersToggleComponent implements OnInit {
 
   map: __esri.Map;
-  mapView: __esri.MapView;
+  view: __esri.View;
 
   @Input() position: string;
 
@@ -53,7 +53,7 @@ export class LayersToggleComponent implements OnInit {
   ngOnInit() {
     this.mapService.isLoaded.subscribe(() => {
       this.map = this.mapService.map;
-      this.mapView = this.mapService.mapView;
+      this.view = this.mapService.view;
     });
   }
 
@@ -62,6 +62,14 @@ export class LayersToggleComponent implements OnInit {
   }
 
   onZoomLayer(layer: __esri.Layer) {
-    this.mapView.goTo(layer.fullExtent);
+    if (this.view.type==="2d") {
+      (this.view as __esri.MapView).goTo(layer.fullExtent);
+    } else {
+      let v = (this.view as __esri.SceneView);
+      v.goTo({
+          target:layer.fullExtent,
+          heading:v.camera.heading
+      });
+    }
   }
 }
