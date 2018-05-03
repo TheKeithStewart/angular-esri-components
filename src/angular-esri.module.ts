@@ -5,6 +5,7 @@ import {
   EsriMapService,
   CustomWidgetDirective,
   LayersToggleComponent,
+  SubLayersToggleComponent,
   EsriModuleProvider
 } from './lib/index';
 import { EsriLoaderModule } from 'angular-esri-loader';
@@ -20,7 +21,8 @@ export * from './lib/core/esri-module-provider';
   declarations: [
     EsriMapComponent,
     CustomWidgetDirective,
-    LayersToggleComponent
+    LayersToggleComponent,
+    SubLayersToggleComponent
   ],
   exports: [
     EsriMapComponent,
