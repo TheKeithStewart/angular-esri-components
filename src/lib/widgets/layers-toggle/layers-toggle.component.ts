@@ -1,13 +1,6 @@
-import { Component, OnInit, Input/*, Pipe*/ } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { EsriMapService } from './../../core/index';
-/*@Pipe({
-  name: 'reverse'
-})
-export class ReversePipe {
-  transform(value:any) {
-    return value.slice().reverse();
-  }
-}*/
+
 @Component({
   selector: 'esri-layersToggle',
   template: `
@@ -62,13 +55,13 @@ export class LayersToggleComponent implements OnInit {
   }
 
   onZoomLayer(layer: __esri.Layer) {
-    if (this.view.type==="2d") {
+    if (this.view.type==='2d') {
       (this.view as __esri.MapView).goTo(layer.fullExtent);
     } else {
-      let v = (this.view as __esri.SceneView);
-      v.goTo({
-          target:layer.fullExtent,
-          heading:v.camera.heading
+      let sceneView = (this.view as __esri.SceneView);
+      sceneView.goTo({
+        target:layer.fullExtent,
+        heading:sceneView.camera.heading
       });
     }
   }
