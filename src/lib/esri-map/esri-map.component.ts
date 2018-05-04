@@ -21,14 +21,14 @@ import { environment } from '../../environments/environment';
 })
 export class EsriMapComponent implements OnInit {
   map: __esri.Map;
-  mapView: __esri.MapView;
+  view: __esri.View;
 
   @ViewChild('map') mapEl: ElementRef;
 
   @Input() mapProperties: __esri.MapProperties;
   @Input() webMapProperties: __esri.WebMapProperties;
-  @Input() mapViewProperties: __esri.MapViewProperties = {};
-
+  @Input() viewType: string = 'MapView';
+  @Input() viewProperties: __esri.ViewProperties = {};
   @Output() mapInit = new EventEmitter();
 
   constructor(private mapService: EsriMapService) { }
@@ -47,9 +47,9 @@ export class EsriMapComponent implements OnInit {
 
     // determine if loading a WebMap or creating a custom map
     if (this.mapProperties) {
-      mapPromise = this.mapService.loadMap(this.mapProperties, this.mapViewProperties, this.mapEl);
+      mapPromise = this.mapService.loadMap(this.mapProperties, this.viewProperties, this.mapEl, this.viewType);
     } else if (this.webMapProperties) {
-      mapPromise = this.mapService.loadWebMap(this.webMapProperties, this.mapViewProperties, this.mapEl);
+      mapPromise = this.mapService.loadWebMap(this.webMapProperties, this.viewProperties, this.mapEl, this.viewType);
     } else {
       console.error('Proper map properties were not provided');
       return;
@@ -57,12 +57,13 @@ export class EsriMapComponent implements OnInit {
 
     mapPromise.then(mapInfo => {
       this.map = mapInfo.map;
-      this.mapView = mapInfo.mapView;
+      this.view = mapInfo.view;
 
       // emit event informing application that the map has been loaded
       this.mapInit.emit({
         map: this.map,
-        mapView: this.mapView
+        mapView: this.view,//duplicate version of same view for those still referencing mapView
+        view: this.view
       });
       this.mapInit.complete();
     });
