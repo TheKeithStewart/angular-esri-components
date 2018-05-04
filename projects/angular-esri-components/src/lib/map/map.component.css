@@ -1,0 +1,8 @@
+@import 'http://js.arcgis.com/4.6/esri/css/main.css';
+
+.map {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
