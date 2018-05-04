@@ -3,11 +3,9 @@ import { Component, OnInit, Input} from '@angular/core';
 @Component({
   selector: 'esri-sublayersToggle',
   template: `<!-- Only display if there is a layer with sublayers -->
-    <div *ngIf="layer && layer.sublayers && layer.sublayers.items">
-        <div *ngFor="let sublayer of layer.sublayers.items.slice().reverse()" class="sublayers">
-            <input type="checkbox" [checked]="sublayer.visible" (click)="onCheck($event, sublayer)" /> {{sublayer.title}}
-            <esri-sublayersToggle [layer]="sublayer"></esri-sublayersToggle><!--recursive sub layers-->
-        </div>
+    <div *ngFor="let sublayer of layer.sublayers.toArray().slice().reverse()" class="sublayers">
+        <input type="checkbox" [checked]="sublayer.visible" (click)="onCheck($event, sublayer)" /> {{sublayer.title}}
+        <esri-sublayersToggle [layer]="sublayer" *ngIf="sublayer.sublayers && sublayer.sublayers.toArray()"></esri-sublayersToggle><!--recursive sub layers-->
     </div>
   `,
   styles: [`
@@ -17,11 +15,11 @@ import { Component, OnInit, Input} from '@angular/core';
   `]
 })
 export class SubLayersToggleComponent {
-  @Input() layer: any;
+  @Input() layer: __esri.Sublayer;
 
   constructor() { }
 
-  onCheck($event: any, sublayer: any) {
+  onCheck($event: any, sublayer: __esri.Sublayer) {
     sublayer.visible = $event.target.checked;
   }
 

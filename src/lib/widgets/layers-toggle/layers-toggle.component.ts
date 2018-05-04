@@ -10,7 +10,7 @@ import { EsriMapService } from './../../core/index';
         <div *ngFor="let layer of map.layers.toArray()">
           <input type="checkbox" [checked]="layer.visible" (click)="onCheck($event, layer)" /> {{layer.title}}
           <a href="javascript:void(0)" (click)="onZoomLayer(layer)">Zoom</a>
-          <esri-sublayersToggle [layer]="layer"></esri-sublayersToggle>
+          <esri-sublayersToggle [layer]="layer" *ngIf="layer.sublayers && layer.sublayers.items"></esri-sublayersToggle>
         </div>
       </div>
     </div>
