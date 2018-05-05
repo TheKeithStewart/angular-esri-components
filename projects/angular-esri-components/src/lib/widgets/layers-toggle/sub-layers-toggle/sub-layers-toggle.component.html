@@ -1,3 +1,4 @@
-<p>
-  sub-layers-toggle works!
-</p>
+<div *ngFor="let sublayer of _sublayers" class="sublayers">
+  <input type="checkbox" [checked]="sublayer.visible" (click)="onCheck($event, sublayer)" /> {{sublayer.title}}
+  <esri-sublayersToggle [layer]="sublayer" *ngIf="sublayer.sublayers && sublayer.sublayers.toArray()"></esri-sublayersToggle><!--recursive sub layers-->
+</div>

@@ -7,13 +7,12 @@ import { EsriMapService } from '../../core/esri-map.service';
   styleUrls: ['./layers-toggle.component.css']
 })
 export class LayersToggleComponent implements OnInit {
-
   map: __esri.Map;
   view: __esri.View;
 
   @Input() position: string;
 
-  constructor(private mapService: EsriMapService) { }
+  constructor(private mapService: EsriMapService) {}
 
   ngOnInit() {
     this.mapService.isLoaded.subscribe(() => {
@@ -30,7 +29,7 @@ export class LayersToggleComponent implements OnInit {
     if (this.view.type === '2d') {
       (this.view as __esri.MapView).goTo(layer.fullExtent);
     } else {
-      const sceneView = (this.view as __esri.SceneView);
+      const sceneView = this.view as __esri.SceneView;
       sceneView.goTo({
         target: layer.fullExtent,
         heading: sceneView.camera.heading

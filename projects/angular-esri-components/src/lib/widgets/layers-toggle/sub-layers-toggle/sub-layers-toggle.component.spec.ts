@@ -8,9 +8,8 @@ describe('SubLayersToggleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SubLayersToggleComponent ]
-    })
-    .compileComponents();
+      declarations: [SubLayersToggleComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
