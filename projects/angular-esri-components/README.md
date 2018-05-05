@@ -16,15 +16,15 @@ npm install --save angular-esri-components
 | esri-map           |                           Available | [README][1]  |              - |
 | EsriModuleProvider |                           Available | [README][4]  |              - |
 | esri-legend        |                         Not Started |              |              - |
-| esri-layerList     |                         Not Started |              |              - |
-| esri-customWidget  |                           Available | [README][2]  |      [#4][004] |
-| esri-layersToggle  |                           Available | [README][3]  |      [#6][006] |
+| esri-layer-list    |                         Not Started |              |              - |
+| esriCustomWidget   |                           Available | [README][2]  |      [#4][004] |
+| esri-layers-toggle |                           Available | [README][3]  |      [#6][006] |
 | (more coming)      |                                     |              |              - |
 
- [1]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/src/lib/esri-map/README.md
- [2]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/src/lib/widgets/custom-widget/README.md
- [3]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/src/lib/widgets/layers-toggle/README.md
- [4]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/src/lib/core/README.md
+ [1]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/projects/angular-esri-components/src/lib/esri-map/README.md
+ [2]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/projects/angular-esri-components/src/lib/widgets/custom-widget/README.md
+ [3]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/projects/angular-esri-components/src/lib/widgets/layers-toggle/README.md
+ [4]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/projects/angular-esri-components/src/lib/core/README.md
 
 
  [004]: https://github.com/TheKeithStewart/angular-esri-components/issues/4

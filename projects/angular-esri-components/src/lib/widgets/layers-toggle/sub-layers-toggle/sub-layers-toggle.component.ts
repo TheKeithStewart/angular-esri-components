@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'esri-sublayersToggle',
+  selector: 'esri-sublayers-toggle, esri-sublayersToggle',
   templateUrl: './sub-layers-toggle.component.html',
   styleUrls: ['./sub-layers-toggle.component.css']
 })

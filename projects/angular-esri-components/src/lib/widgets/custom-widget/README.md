@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-logo',
   template: `
-    <img esri-customWidget [position]="position" src="/assets/images/transtraks_bus.png" width="100">
+    <img esriCustomWidget [position]="position" src="https://images.forbes.com/media/lists/companies/esri_416x416.jpg" width="100">
   `,
   styleUrls: ['./logo.component.scss']
 })

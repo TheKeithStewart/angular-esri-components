@@ -1,4 +1,4 @@
 <div *ngFor="let sublayer of _sublayers" class="sublayers">
   <input type="checkbox" [checked]="sublayer.visible" (click)="onCheck($event, sublayer)" /> {{sublayer.title}}
-  <esri-sublayersToggle [layer]="sublayer" *ngIf="sublayer.sublayers && sublayer.sublayers.toArray()"></esri-sublayersToggle><!--recursive sub layers-->
+  <esri-sublayers-toggle [layer]="sublayer" *ngIf="sublayer.sublayers && sublayer.sublayers.toArray()"></esri-sublayers-toggle><!--recursive sub layers-->
 </div>

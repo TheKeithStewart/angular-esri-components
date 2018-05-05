@@ -3,7 +3,7 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 import { EsriMapService } from './../../core/esri-map.service';
 
 @Directive({
-  selector: '[esri-customWidget]'
+  selector: '[esriCustomWidget], [esri-customWidget]'
 })
 export class CustomWidgetDirective implements OnInit {
   @Input() position: string;

@@ -1,7 +1,7 @@
 import { Directive, Input } from '@angular/core';
 
 @Directive({
-  selector: '[esri-customWidget]'
+  selector: '[esriCustomWidget], [esri-customWidget]'
 })
 export class MockCustomWidgetDirective {
   @Input() position: string;

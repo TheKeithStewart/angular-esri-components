@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { EsriMapService } from '../../core/esri-map.service';
 
 @Component({
-  selector: 'esri-layersToggle',
+  selector: 'esri-layers-toggle, esri-layersToggle',
   templateUrl: './layers-toggle.component.html',
   styleUrls: ['./layers-toggle.component.css']
 })
