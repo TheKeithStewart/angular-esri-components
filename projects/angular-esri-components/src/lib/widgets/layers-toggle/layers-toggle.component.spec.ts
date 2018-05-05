@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LayersToggleComponent } from './layers-toggle.component';
+import { EsriMapService } from '../../core/esri-map.service';
+import { MockEsriMapSerivice } from '../../../testing';
 
 describe('LayersToggleComponent', () => {
   let component: LayersToggleComponent;
@@ -8,7 +10,10 @@ describe('LayersToggleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LayersToggleComponent ]
+      declarations: [ LayersToggleComponent ],
+      providers: [
+        { provide: EsriMapService, useClass: MockEsriMapSerivice }
+      ]
     })
     .compileComponents();
   }));

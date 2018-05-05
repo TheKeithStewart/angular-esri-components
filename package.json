@@ -4,9 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "test": "ng test angular-esri-components",
     "build": "ng build angular-esri-components",
     "build:prod": "ng build angular-esri-components --prod"
   },
