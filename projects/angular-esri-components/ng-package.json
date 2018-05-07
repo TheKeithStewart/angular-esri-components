@@ -3,10 +3,13 @@
   "dest": "../../dist/angular-esri-components",
   "deleteDestPath": false,
   "lib": {
-    "entryFile": "src/public_api.ts"
+    "entryFile": "src/public_api.ts",
+    "umdModuleIds": {
+      "esri-loader": "esriLoader"
+    }
   },
   "whitelistedNonPeerDependencies": [
     "@types/arcgis-js-api",
-    "angular-esri-loader"
+    "esri-loader"
   ]
 }

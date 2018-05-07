@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EsriLoaderModule } from 'angular-esri-loader';
 
 import { AngularEsriComponentsComponent } from './angular-esri-components.component';
 import { MapComponent } from './map/map.component';
@@ -12,8 +11,7 @@ import { EsriMapService } from './core/esri-map.service';
 
 @NgModule({
   imports: [
-    CommonModule,
-    EsriLoaderModule
+    CommonModule
   ],
   declarations: [
     AngularEsriComponentsComponent,

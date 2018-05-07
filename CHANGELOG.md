@@ -4,6 +4,7 @@
 ### Breaking Changes
 
  * now dependent on version ^6.0.0 of Angular
+ * `angular-esri-loader` is no longer included with the library. Instead, `esri-loader` is used directly.
 
 ### Features
 
