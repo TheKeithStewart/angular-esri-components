@@ -1,6 +1,6 @@
 {
   "name": "angular-esri-components",
-  "version": "0.0.5",
+  "version": "2.0.0",
   "dependencies": {
     "@types/arcgis-js-api": "^4.6.0",
     "angular-esri-loader": "^1.1.0"
