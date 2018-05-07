@@ -42,9 +42,9 @@ export class MapComponent implements OnInit {
       return;
     }
 
-    mapPromise.then(mapInfo => {
+    mapPromise.then((mapInfo: { map: __esri.Map, view: __esri.MapView }) => {
       this.map = mapInfo.map;
-      this.mapView = mapInfo.mapView;
+      this.mapView = mapInfo.view;
 
       // emit event informing application that the map has been loaded
       this.mapInit.emit({
