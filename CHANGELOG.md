@@ -1,3 +1,18 @@
+<a name="2.0.0">
+# 2.0.0 (2018/??/??)
+
+### Breaking Changes
+
+ * now dependent on version ^6.0.0 of Angular
+
+### Features
+
+ * display sublayers on the Layers Toggle widget
+
+### Refactorings
+
+ * update library structure
+
 <a name="1.0.2"></a>
 # 1.0.3 (2018/03/02)
  * upgrade to arcgis js 4.6
