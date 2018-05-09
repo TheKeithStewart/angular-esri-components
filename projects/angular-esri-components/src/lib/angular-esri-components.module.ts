@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AngularEsriComponentsComponent } from './angular-esri-components.component';
 import { MapComponent } from './map/map.component';
 import { CustomWidgetDirective } from './widgets/custom-widget/custom-widget.directive';
 import { LayersToggleComponent } from './widgets/layers-toggle/layers-toggle.component';
@@ -14,14 +13,12 @@ import { EsriMapService } from './core/esri-map.service';
     CommonModule
   ],
   declarations: [
-    AngularEsriComponentsComponent,
     MapComponent,
     CustomWidgetDirective,
     LayersToggleComponent,
     SubLayersToggleComponent
   ],
   exports: [
-    AngularEsriComponentsComponent,
     MapComponent,
     CustomWidgetDirective
   ],
