@@ -1,0 +1,14 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/lib",
+  "lib": {
+    "entryFile": "src/public_api.ts",
+    "umdModuleIds": {
+      "esri-loader": "esriLoader"
+    }
+  },
+  "whitelistedNonPeerDependencies": [
+    "@types/arcgis-js-api",
+    "esri-loader"
+  ]
+}

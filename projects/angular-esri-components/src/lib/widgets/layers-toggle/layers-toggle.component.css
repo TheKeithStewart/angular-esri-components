@@ -1,0 +1,7 @@
+.esri-layers-toggle {
+  z-index: 99;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  opacity: 0.75;
+}

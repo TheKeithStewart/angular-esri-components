@@ -1,0 +1,17 @@
+{
+    "extends": "../../tslint.json",
+    "rules": {
+        "directive-selector": [
+            true,
+            "attribute",
+            "esri",
+            "camelCase"
+        ],
+        "component-selector": [
+            true,
+            "element",
+            "esri",
+            "kebab-case"
+        ]
+    }
+}
