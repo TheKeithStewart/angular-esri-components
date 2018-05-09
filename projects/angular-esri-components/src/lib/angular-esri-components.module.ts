@@ -20,7 +20,8 @@ import { EsriMapService } from './core/esri-map.service';
   ],
   exports: [
     MapComponent,
-    CustomWidgetDirective
+    CustomWidgetDirective,
+    LayersToggleComponent
   ],
   providers: [EsriModuleProvider, EsriMapService]
 })
