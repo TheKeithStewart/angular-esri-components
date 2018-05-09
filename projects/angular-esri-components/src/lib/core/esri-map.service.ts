@@ -11,7 +11,7 @@ export class EsriMapService {
 
   prepareViewProps(
     mapViewProperties: __esri.ViewProperties,
-    mapEl: ElementRef<any>,
+    mapEl: ElementRef,
     map: __esri.Map
   ) {
     const newViewProps = this.extend({}, mapViewProperties);
