@@ -24,7 +24,8 @@ export class MapComponent implements OnInit {
 
   @Input() mapProperties: __esri.MapProperties;
   @Input() webMapProperties: __esri.WebMapProperties;
-  @Input() mapViewProperties: __esri.MapViewProperties = {};
+  @Input() mapViewProperties: __esri.ViewProperties = {};
+  @Input() viewType: string = 'MapView';
 
   @Output() mapInit = new EventEmitter();
 
@@ -44,9 +45,9 @@ export class MapComponent implements OnInit {
 
     // determine if loading a WebMap or creating a custom map
     if (this.mapProperties) {
-      mapPromise = this.mapService.loadMap(this.mapProperties, this.mapViewProperties, this.mapEl);
+      mapPromise = this.mapService.loadMap(this.mapProperties, this.mapViewProperties, this.mapEl, this.viewType);
     } else if (this.webMapProperties) {
-      mapPromise = this.mapService.loadWebMap(this.webMapProperties, this.mapViewProperties, this.mapEl);
+      mapPromise = this.mapService.loadWebMap(this.webMapProperties, this.mapViewProperties, this.mapEl, this.viewType);
     } else {
       console.error('Proper map properties were not provided');
       return;
