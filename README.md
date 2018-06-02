@@ -1,53 +1,27 @@
-# angular-esri-components
-[![npm version](https://badge.fury.io/js/angular-esri-components.svg)](https://badge.fury.io/js/angular-esri-components)
+# AngularEsriComponentsPlatform
 
-A set of Angular components to work with [ArcGIS API for JavaScript v4.6](https://developers.arcgis.com/javascript/)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
-## Setup
+## Development server
 
-```
-npm install --save angular-esri-components
-```
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Component status:
+## Code scaffolding
 
-| Component          | Status                              | Docs         | Issue          |
-|--------------------|-------------------------------------|--------------|----------------|
-| esri-map           |                           Available | [README][1]  |              - |
-| EsriModuleProvider |                           Available | [README][4]  |              - |
-| esri-legend        |                         Not Started |              |              - |
-| esri-layerList     |                         Not Started |              |              - |
-| esri-customWidget  |                           Available | [README][2]  |      [#4][004] |
-| esri-layersToggle  |                           Available | [README][3]  |      [#6][006] |
-| (more coming)      |                                     |              |              - |
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
- [1]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/src/lib/esri-map/README.md
- [2]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/src/lib/widgets/custom-widget/README.md
- [3]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/src/lib/widgets/layers-toggle/README.md
- [4]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/src/lib/core/README.md
+## Build
 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
- [004]: https://github.com/TheKeithStewart/angular-esri-components/issues/4
- [006]: https://github.com/TheKeithStewart/angular-esri-components/issues/6
- 
-## Setup
+## Running unit tests
 
-**Note:** It is no longer necessary to add an import statement into your `index.html` file for the ESRI CSS.  This has been included in the styles for the map component.  If you have an existing import of the ESRI CSS in your application you should remove it.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Include `AngularEsriModule` in your main module:
+## Running end-to-end tests
 
-```ts
-// ...
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-import { AngularEsriModule } from 'angular-esri-components';
+## Further help
 
-@NgModule({
-  // ...
-  imports: [
-    AngularEsriModule
-  ],
-  // ...
-})
-export class AppModule { }
-
-```
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

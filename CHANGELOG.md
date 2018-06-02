@@ -1,3 +1,33 @@
+<a name="2.0.0">
+# 2.0.0 (2018/06/02)
+
+### Breaking Changes
+
+ * now dependent on version ^6.0.0 of Angular
+ * `angular-esri-loader` is no longer included with the library. Instead, `esri-loader` is used directly.
+
+ To upgrade your projects you will need to replace the `EsriLoaderService` that you may be importing from `angular-esri-loader` with the `EsriModuleProvider` from `angular-esri-components`. It will look like the below:
+
+ ```
+ import { EsriLoaderService } from 'angular-esri-loader';
+ ```
+
+ Will become
+
+```
+ import { EsriModuleProvider } from 'angular-esri-components';
+ ```
+
+ Also, `EsriModuleProvider` has a slightly different API than `EsriLoaderService` did. So, instead of calling a function called `loadModules()` you will call `require()`.
+
+### Features
+
+ * display sublayers on the Layers Toggle widget
+
+### Refactorings
+
+ * update library structure
+
 <a name="1.0.2"></a>
 # 1.0.3 (2018/03/02)
  * upgrade to arcgis js 4.6

@@ -1,0 +1,10 @@
+<div esriCustomWidget [position]="position">
+  <!-- Only display if there is a map and it has layers -->
+  <div *ngIf="map?.layers.length > 0" class="esri-layers-toggle">
+    <div *ngFor="let layer of map.layers.toArray()">
+      <input type="checkbox" [checked]="layer.visible" (click)="onCheck($event, layer)" /> {{layer.title}}
+      <a href="javascript:void(0)" (click)="onZoomLayer(layer)">Zoom</a>
+      <esri-sublayers-toggle [layer]="layer" *ngIf="layer.sublayers && layer.sublayers.items"></esri-sublayers-toggle>
+    </div>
+  </div>
+</div>
