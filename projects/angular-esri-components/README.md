@@ -5,9 +5,7 @@ A set of Angular components to work with [ArcGIS API for JavaScript v4.6](https:
 
 ## Setup
 
-```
-npm install --save angular-esri-components
-```
+`npm install --save angular-esri-components`OR `yarn add angular-esri-components`
 
 ## Component status:
 
