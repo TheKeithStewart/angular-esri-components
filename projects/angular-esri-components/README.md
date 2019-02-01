@@ -19,7 +19,7 @@ A set of Angular components to work with [ArcGIS API for JavaScript v4.6](https:
 | esri-layers-toggle |                           Available | [README][3]  |      [#6][006] |
 | (more coming)      |                                     |              |              - |
 
- [1]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/projects/angular-esri-components/src/lib/esri-map/README.md
+ [1]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/projects/angular-esri-components/src/lib/map/README.md
  [2]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/projects/angular-esri-components/src/lib/widgets/custom-widget/README.md
  [3]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/projects/angular-esri-components/src/lib/widgets/layers-toggle/README.md
  [4]: https://github.com/TheKeithStewart/angular-esri-components/blob/master/projects/angular-esri-components/src/lib/core/README.md
